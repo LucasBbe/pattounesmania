@@ -1,0 +1,130 @@
+
+@font-face {
+  font-family: 'Garet-Book';
+  src: url('src/Fonts/Garet-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --violet: #580462;
+  --blue: #9bc7eb;
+  --beige: #fffcf6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Garet-Book', sans-serif;
+  background-color: var(--beige);
+  color: #2e2e2e;
+}
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 2rem;
+  background: linear-gradient(180deg, var(--beige), #fff, var(--beige));
+}
+
+.hero {
+  text-align: center;
+  width: 100%;
+  animation: fadeIn 1s ease;
+}
+
+.logo {
+  width: 23rem;
+  margin-bottom: 1.5rem;
+}
+
+.animated-logo {
+  animation: floatIn 1.2s ease-out;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--violet);
+   font-family: 'Garet-Book', 'Chewy', sans-serif;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #1b1b1b;
+  font-family: 'Garet-Book', 'Chewy', sans-serif;
+  font-weight: 600;
+
+}
+
+.infos {
+  margin: 1rem 0 2rem;
+  font-weight: 900;
+  font-family: 'Garet-Book', 'Chewy', sans-serif;
+
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+
+  color: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.violet {
+  background-color: var(--violet);
+}
+
+.blue {
+  background-color: var(--blue);
+  color: white;
+}
+
+.coming-soon {
+  font-style: italic;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.description {
+  color: #53115c;
+  font-weight: 600;
+  font-family: 'Garet-Book', 'Chewy', sans-serif;
+
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .logo {
+  width: 20rem;
+  margin-bottom: 1.5rem;
+}
+}
+
+@media (max-width: 320px) {
+  .logo {
+  width: 17rem;
+  margin-bottom: 1.5rem;
+}
+}

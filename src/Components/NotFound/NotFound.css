@@ -1,0 +1,58 @@
+:root {
+  --violet: #580462;
+  --blue: #9bc7eb;
+  --beige: #fffcf6;
+}
+
+.notfound-wrapper {
+  background-color: var(--beige);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.notfound-box {
+  background-color: white;
+  border: 2px solid var(--violet);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(88, 4, 98, 0.1);
+}
+
+.notfound-box h1 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--violet);
+}
+
+.notfound-box .main {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--violet);
+  margin: 1rem 0 0.5rem;
+}
+
+.notfound-box .sub {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.notfound-box a {
+  background-color: var(--violet);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.notfound-box a:hover {
+  background-color: #732c84;
+}

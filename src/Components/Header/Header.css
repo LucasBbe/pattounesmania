@@ -1,0 +1,143 @@
+@font-face {
+  font-family: 'SuperBubbly';
+  src: url('src/Fonts/SuperBubbly.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --violet: #580462;
+  --blue: #9bc7eb;
+  --beige: #fffcf6;
+}
+
+.site-header {
+  background-color: var(--beige);
+  border-bottom: 2px solid var(--violet);
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+ font-family: 'SuperBubbly', 'Chewy', sans-serif;
+ font-size: 2.25rem;
+ font-weight: 200;
+ color: var(--violet);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--violet);
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--violet);
+  color: white;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  background-color: none;
+  border: none;
+  box-shadow: none;
+}
+.arrow {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  margin-left: 0.25rem;
+}
+
+.dropdown:hover .arrow {
+  transform: rotate(90deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--beige);
+  border: 1px solid var(--violet);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: var(--violet);
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: var(--violet);
+  color: white;
+}
+
+.arrow.rotate {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .site-logo {
+  padding: 1rem;
+  }
+   .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .dropdown-menu {
+    margin-top: 0.5rem;
+    border: 1px solid var(--violet);
+    transform: translateX(-25%);
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+}

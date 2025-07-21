@@ -1,0 +1,132 @@
+:root {
+  --violet: #580462;
+  --rose: #f8e1ec;
+  --mint: #e0f5f1;
+  --beige: #fffcf6;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+.petsitting-page {
+  background-color: var(--beige);
+  color: #333;
+}
+
+.petsitting-hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: 50% 85%;
+  filter: brightness(0.85);
+}
+
+.hero-inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: rgba(248, 248, 248, 0.993);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+ background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.541),
+    rgba(255, 255, 255, 0.445) 60%,
+    rgba(255, 255, 255, 0)    100% 
+  );
+}
+
+.hero-inner h1 {
+  font-size: 2.9rem;
+  margin-bottom: 1rem;
+  font-family: 'SuperBubbly', sans-serif;
+font-weight: normal;
+}
+
+.hero-inner p {
+  font-size: 1.2rem;
+}
+
+.petsitting-section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.section-img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  max-height: 30rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.section-content div {
+  flex: 2 1 400px;
+}
+
+.petsitting-section h2 {
+  color: var(--violet);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.petsitting-section p {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px var(--shadow);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+
+  .section-content {
+    flex-direction: column;
+  }
+
+  .section-img {
+    width: 100%;
+  }
+
+    .hero-inner {
+    position: static;
+    transform: none;
+    background: none;
+    color: var(--violet);
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .hero-image {
+    height: auto;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.5rem;
+    text-shadow: none;
+  }
+
+  .hero-inner p {
+    color: #333;
+    font-size: 1rem;
+  }
+}
+

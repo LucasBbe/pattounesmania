@@ -1,0 +1,237 @@
+:root {
+  --beige: #fffaf3;
+  --violet: #a678b2;
+  --rose: #fcd6e2;
+  --blue: #c6e3f7;
+}
+
+.histoire-container {
+  background-color: var(--beige);
+  padding: 2rem 1rem;
+  font-family: var(--font-body);
+}
+
+.histoire-banner {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(145deg, #c6e4f7ab, var(--blue));
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  color: #473647;
+}
+
+.histoire-banner h1 {
+  font-family: 'SuperBubbly', 'Chewy', sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+}
+
+.histoire-banner p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.histoire-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.histoire-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.histoire-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.histoire-img {
+  flex: 1;
+  text-align: center;
+}
+
+.histoire-img img {
+  max-width: 280px;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(244, 185, 211, 0.4);
+  border: 6px solid white;
+}
+
+.histoire-img2 {
+  flex: 1;
+  text-align: center;
+}
+
+.histoire-img2 img {
+  max-width: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(244, 185, 211, 0.4);
+  border: 6px solid white;
+}
+
+.histoire-content {
+  flex: 2;
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 15px rgba(166, 120, 178, 0.2);
+}
+
+.histoire-content h2 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--violet);
+  margin-bottom: 1rem;
+}
+
+.histoire-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #403243;
+  margin-bottom: 1rem;
+}
+
+.histoire-background-strip {
+      background: linear-gradient(145deg,var(--blue), #c6e4f7ab);
+
+
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  margin: 4rem 0;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  border-radius: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .histoire-block {
+    flex-direction: column !important;
+      margin-bottom: 3rem;
+  gap: 1rem;
+  padding: 0 1rem;
+  }
+ 
+  .histoire-background-strip {
+  height: 20vh; 
+  clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%);
+}
+
+  .histoire-img img {
+    max-width: 60vw;
+      margin-bottom: 1rem;
+
+  }
+  .histoire-img2 img {
+    max-width: 75vw;
+      margin-bottom: 1rem;
+
+  }
+
+  .histoire-content {
+    padding: 1.5rem;
+  }
+
+ 
+  .histoire-banner h1 {
+  font-size: 1.8rem;
+}
+
+.histoire-banner p {
+  font-size: 1rem;
+}
+
+.histoire-content h2 {
+  font-size: 1.5rem;
+}
+
+.histoire-content p {
+  font-size: 0.95rem;
+}
+
+}
+ /* new */
+
+ .histoire-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.histoire-summary h2 {
+  margin-top: 2rem;
+text-align: center;
+font-size: 1.7rem;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-family: var(--font-title);
+  color: var(--violet);
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #5a475e;
+  font-family: var(--font-body);
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  max-width: 300px;
+  box-shadow: 0 0 20px rgba(226, 197, 235, 0.4);
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(147, 112, 219, 0.3);
+}
+
+.service-card:hover h3::after {
+  content: " →";
+  color: var(--violet);
+}
+
+.histoire-redirection-note {
+  margin-top: 2rem;
+  background-color: #e0f2ff;
+  box-shadow: 0 3px 5px rgba(109, 8, 156, 0.1);
+  border-left: 3px solid #5a475e;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #2a2e38;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .histoire-services {
+    flex-direction: column;
+    align-items: center;
+  }
+}
