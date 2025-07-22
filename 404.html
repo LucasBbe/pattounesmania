@@ -2,10 +2,15 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; URL=/" />
-    <title>Redirection...</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+    <script>
+      const redirectTo = sessionStorage.redirectTo || "/";
+      sessionStorage.redirectTo = null;
+      window.location.replace("/?" + "redirect=" + encodeURIComponent(location.pathname));
+    </script>
+    <title>Chargement…</title>
   </head>
   <body>
-    <p>Redirection vers l’accueil...</p>
+    <p>Chargement…</p>
   </body>
 </html>
